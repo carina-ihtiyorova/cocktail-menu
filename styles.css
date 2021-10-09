@@ -1,0 +1,116 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(-45deg, #DFE166, #EC96A4, #824d86, #9A9EAB);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.single-cocktail {
+  background-color: pink;
+  width: 100%;
+}
+
+.wrapper {
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-family: Gemini, sans-serif;
+}
+
+.cocktail-header {
+  margin: 40px 0;
+  /* border: 2px solid red; */
+  width: 100%;
+  text-align: center;
+}
+
+/* ------ Input Style---------- */
+.cocktail-search-name {
+  padding: 10px 20px;
+  width: 30%;
+  border-radius: 10px;
+}
+
+/* ---------Button Style -------- */
+.search-button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+/* Div for cocktail  image and details */
+.cocktail-wrapper {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  /* column-gap: 20px; */
+  row-gap: 40px;
+  width: 75%;
+  margin-top: 50px;
+  padding-top: 35px;
+  padding-bottom: 100px;
+  justify-items: center;
+}
+
+.cocktail {
+  position: relative;
+  place-self: center;
+  box-sizing: border-box;
+}
+
+.cocktail img {
+  width: 95%;
+  height: 260px;
+  object-fit: cover;
+  border: 10px solid rgba(236, 10, 10, 0.096);
+  border-radius: 10px;
+}
+
+.cocktail-name {
+  position: absolute;
+  z-index: 1;
+  bottom: -18%;
+  right: -10%;
+  background-color: rgba(243, 7, 153, 0.164);
+  color: rgba(224, 250, 152, 0.904);
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-family: Gemini, sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+}
