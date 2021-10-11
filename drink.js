@@ -7,7 +7,6 @@ let find = cocktails.find(el => {
 })
 
 let drinkRecieps = `
-
           <div class = "img">
           <img src = "${find.strDrinkThumb}"/>
           </div>

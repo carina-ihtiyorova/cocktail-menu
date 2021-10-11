@@ -54,17 +54,17 @@ function cocktailIdSearch(event) {
 ////////////////////////////////////Link to New HTML /////////////////////////
 ///////we have a problem:when searched for drinks our click function to another html isnt working because we picked div.cocktail array but inside  searchstrdrink we are looping thru .cocktails-block so i changed line 31 to our line 47 but now when clicked on the searched elements its not showing anything why?/////////////
 
-// const block = document.querySelectorAll(".cocktail");
-// block.forEach(el => {
-//    el.addEventListener("click", function () {
-//       location.href = "drink.html";
-//    })
-// })
-// block.forEach(el => {
-//    el.addEventListener("click", cocktailId)
+const block = document.querySelectorAll(".cocktail");
+block.forEach(el => {
+   el.addEventListener("click", function () {
+      location.href = "drink.html";
+   })
+})
+block.forEach(el => {
+   el.addEventListener("click", cocktailId)
 
-//    function cocktailId(event) {
-//       let id = event.target.id
-//       localStorage.setItem("currentCoctailId", id)
-//    }
-// })
+   function cocktailId(event) {
+      let id = event.target.id
+      localStorage.setItem("currentCoctailId", id)
+   }
+})
