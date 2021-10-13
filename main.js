@@ -30,9 +30,7 @@ searchInput.addEventListener("input", searchStrDrink)
 function searchStrDrink() {
    let div = document.querySelectorAll(".cocktail")
    div.forEach(el => {
-      // el.removeEventListener("click",cocktailIdSearch)
       el.innerHTML = ""
-
    })
    let filteredCoctailName = cocktails.filter(el => {
       return el.strDrink.toLowerCase().includes(searchInput.value.toLowerCase());
@@ -62,9 +60,5 @@ block.forEach(el => {
 })
 block.forEach(el => {
    el.addEventListener("click", cocktailId)
-
-   function cocktailId(event) {
-      let id = event.target.id
-      localStorage.setItem("currentCoctailId", id)
-   }
+   cocktailIdSearch(event)
 })
