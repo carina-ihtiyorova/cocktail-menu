@@ -14,16 +14,15 @@ let drinkRecieps = `
           <h3 class = "cocktail-name-drink" > Drink Name: ${ find.strDrink} </h3>
           <h3 class = "cocktail-category" > Type Of Drink: ${ find.strCategory} </h3>
           <h3 class = "cocktail-instruction" > Instructions: ${ find.strInstructions} </h3>
-          <h3 >ingredients: </h3>
+          <h3 class = "h3-last">ingredients: </h3>
           <button class="showBtn">SHOW ALL COCKTAILS </button>
           </div>`
 let div = document.createElement('div');
 div.setAttribute("class", "cocktails-blocks-drink")
 div.innerHTML = drinkRecieps;
 drinkWrapper.appendChild(div);
-let drinkInfo = document.querySelector(".ul")
+let drinkInfo = document.querySelector(".h3-last")
 let ul = document.createElement('ul');
-//ul.setAttribute("class", "ingredients")
 for (let el in find) {
   if (el.includes("strIngredient")) {
     let li = document.createElement("li")
