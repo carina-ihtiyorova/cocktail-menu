@@ -14,9 +14,9 @@ let searchInput = document.querySelector(".cocktail-search-name")
 
 cocktails.forEach(arr => {
    let cocktail = `
-        <div class="cocktail">
-        <img src="${arr.strDrinkThumb}" id="${arr.idDrink}" />
-        <p class="cocktail-name" id="${arr.idDrink}">${arr.strDrink}</p> 
+        <div class="cocktail ${arr.idDrink}">
+        <img src="${arr.strDrinkThumb}"/>
+        <p class="cocktail-name">${arr.strDrink}</p> 
         </div>`;
    let div = document.createElement('div');
    div.setAttribute("class", "cocktails-blocks")
@@ -37,16 +37,16 @@ function searchStrDrink() {
    })
    filteredCoctailName.forEach((el, index) => {
       let filteredCoctails = `
-      <div class="cocktail">
-      <img src="${el.strDrinkThumb}" id="${el.idDrink}" />
-      <p class="cocktail-name" id="${el.idDrink}">${el.strDrink}</p> 
+      <div class="cocktail ${el.idDrink}">
+      <img src="${el.strDrinkThumb}" />
+      <p class="cocktail-name" >${el.strDrink}</p> 
       </div>`;
       div[index].innerHTML = filteredCoctails
       div[index].addEventListener("click", cocktailIdSearch)
    })
 }
 function cocktailIdSearch(event) {
-   let id = event.target.id
+   let id = event.target.parentElement.classList[1]
    localStorage.setItem("currentCoctailId", id)
 }
 ////////////////////////////////////Link to New HTML /////////////////////////
@@ -61,7 +61,7 @@ block.forEach(el => {
 block.forEach(el => {
    el.addEventListener("click", cocktailId)
    function cocktailId(event) {
-      let id = event.target.id
+      let id = event.target.parentElement.classList[1]
       localStorage.setItem("currentCoctailId", id)
    }
 })
