@@ -60,5 +60,8 @@ block.forEach(el => {
 })
 block.forEach(el => {
    el.addEventListener("click", cocktailId)
-   cocktailIdSearch(event)
+   function cocktailId(event) {
+      let id = event.target.id
+      localStorage.setItem("currentCoctailId", id)
+   }
 })
