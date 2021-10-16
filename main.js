@@ -15,7 +15,7 @@ cocktails.forEach(el => {
    let cocktail = createCocktailBlock(el)
    let div = document.createElement('div');
    div.setAttribute("class", "cocktails-blocks")
-   
+
    div.innerHTML = cocktail;
    cocktailWrapper.appendChild(div);
 });
@@ -43,7 +43,7 @@ function searchStrDrink() {
 //    localStorage.setItem("currentCoctailId", id)
 // }
 function createCocktailBlock(el) {
-      let cocktailBlock = `
+   let cocktailBlock = `
       <div class="cocktail ${el.idDrink}">
       <img src="${el.strDrinkThumb}" />
       <p class="cocktail-name" >${el.strDrink}</p> 
